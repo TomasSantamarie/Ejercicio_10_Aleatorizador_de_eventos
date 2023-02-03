@@ -15,9 +15,19 @@ class Objeto : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
+        // Esto es del ejercicio 11, creamos Mochila_Articulo.kt donde estarán las clases Mochila y Articulo y creamos una mochila
+
+
         binding.boton1.setOnClickListener{
+            // Esto es del ejercicio 11, mete el pico en la mochila
+            var mochila = Mochila( 200)
+            mochila.addArticulo(Articulo("Pico",5,10,20))
             val intent = Intent(this, Blanco::class.java)
+                intent.putExtra("Mochila",mochila)
+
             startActivity(intent)
+
+
         }
 
         binding.boton2.setOnClickListener{

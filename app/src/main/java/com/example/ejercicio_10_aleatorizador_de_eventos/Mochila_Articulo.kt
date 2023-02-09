@@ -52,4 +52,7 @@ class Mochila(private var pesoMochila: Int): Serializable {
     override fun toString(): String {
         return "Mochila(pesoMochila=$pesoMochila, contenido=$contenido)"
     }
+
+
+
 }

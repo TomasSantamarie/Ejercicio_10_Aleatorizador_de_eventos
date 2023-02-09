@@ -1,5 +1,6 @@
 package com.example.ejercicio_10_aleatorizador_de_eventos
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -8,6 +9,7 @@ import com.example.ejercicio_10_aleatorizador_de_eventos.databinding.ActivityObj
 
 class Objeto : AppCompatActivity() {
     private lateinit var binding: ActivityObjetoBinding
+    @SuppressLint("SuspiciousIndentation")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_objeto)
@@ -20,13 +22,16 @@ class Objeto : AppCompatActivity() {
 
         binding.boton1.setOnClickListener{
             // Esto es del ejercicio 11, mete el pico en la mochila
-            var mochila = Mochila( 200)
             mochila.addArticulo(Articulo("Pico",5,10,20))
+            /*
             val intent = Intent(this, Blanco::class.java)
                 intent.putExtra("Mochila",mochila)
 
             startActivity(intent)
+             */
 
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
 
         }
 
